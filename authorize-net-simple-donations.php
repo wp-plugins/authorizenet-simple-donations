@@ -2,10 +2,12 @@
 
 /*
 Plugin Name: Authorize.net - Simple Donations
-Author: Wuxxa Design Studios
-Author URI: http://www.wuxxa.com/?ref=donate-authorize
-Description: Non-profit groups can now take secure donations from any page on their site.
-Version: 1.0
+Author: Aman Verma | Wuxxa Design Studios
+Author URI: http://www.wuxxa.com/product-support/?ref=auth-simple-donations
+Plugin URL: http://www.wuxxa.com/products/authorizenet-simple-donations  /?ref=auth-simple-donation
+Description: Accept donations simply with Authorize.net. Easy to use and configure.
+Version: 1.1
+License: GPLv2 or later
 */
 
 
