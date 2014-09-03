@@ -6,7 +6,7 @@ Author: Aman Verma | Wuxxa Design Studios
 Author URI: http://www.wuxxa.com/product-support/?ref=auth-simple-donations
 Plugin URL: http://www.wuxxa.com/products/authorizenet-simple-donations  /?ref=auth-simple-donation
 Description: Accept donations simply with Authorize.net. Easy to use and configure.
-Version: 1.1
+Version: 1.2
 License: GPLv2 or later
 */
 
@@ -353,6 +353,7 @@ endif;
     <?php submit_button(); ?>
 
 </form>		
+<p style="font-weight:bold">Use shortcode [wds_donate]</p>
 </div><?php
 }
 

@@ -4,7 +4,7 @@ Donate link: http://www.wuxxa.com/
 Tags: authorize.net donation plugin, donation plugin, authoriz.net, donation widget
 Requires at least: 3.0
 Tested up to: 3.9
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 
 Authorize.net - Simple Donations
@@ -21,6 +21,7 @@ Authorize.net - Simple Donations Plugin Features:
       2. Easy to configure in admin section.
       3. List of all donations and their details.
       4. Customize Thank you & Processor description text
+      5. Add this [wds_donate] shortcode
 
 For more support visit [Plugin Support](http://www.wuxxa.com/product-support/?ref=auth-simple-donations) We will be glad to help you. [Follow me](http://www.twitter.com/amanverma217) for more updates.
 
@@ -47,7 +48,7 @@ Configuration:
       3. Select your API mode. Use 'Sandbox' for testing else use 'Live' mode for real transactions.
       4. You can also add a customized 'Thank You' message.
       5. Save settings.
-      6. Add this [wds_donation] shortcode to the page/post where you want to take donation.  
+      6. Add this [wds_donate] shortcode to the page/post where you want to take donation.  
       7. It will add the donation form on that page/post.
       
    
