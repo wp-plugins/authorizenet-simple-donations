@@ -4,7 +4,7 @@ Donate link: http://www.wuxxa.com/
 Tags: authorize.net donation plugin, donation plugin, authoriz.net, donation widget
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.2
+Stable tag: 2.1
 License: GPLv2 or later
 
 Authorize.net - Simple Donations
