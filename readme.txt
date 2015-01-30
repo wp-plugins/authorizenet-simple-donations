@@ -3,7 +3,7 @@ Contributors: efficientninja
 Donate link: http://www.wuxxa.com/
 Tags: authorize.net donation plugin, donation plugin, authoriz.net, donation widget
 Requires at least: 3.0
-Tested up to: 3.9
+Tested up to: 4.1
 Stable tag: 1.2
 License: GPLv2 or later
 
@@ -59,6 +59,14 @@ Checking Donation details:
       3. Click on any donation to see its details.
 
 
+== Screenshots ==
+
+1. Activate plugin.
+2. Click on Donation Settings.
+3. Configure and save donation settings.
+4. Add shortcode [wds_donate] to the page/post where you want to take donation.
+5. Click on donation to view donation details.
+
 
 == Frequently Asked Questions ==
 
@@ -66,6 +74,6 @@ Checking Donation details:
 
 Yes you can customize thank you message in Donation Settings.
 
-= Can I test with sandbox =
+= Can I test with sandbox? =
 
 Yes you can change to sandbox mode in Donation Settings.

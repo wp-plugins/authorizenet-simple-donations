@@ -2,11 +2,11 @@
 
 /*
 Plugin Name: Authorize.net - Simple Donations
-Author: Aman Verma | Wuxxa Design Studios
-Author URI: http://www.wuxxa.com/product-support/?ref=auth-simple-donations
-Plugin URL: http://www.wuxxa.com/products/authorizenet-simple-donations  /?ref=auth-simple-donation
+Author: Aman Verma
+Author URI: https://twitter.com/amanverma217
+Plugin URL: http://www.wuxxa.com/products/authorizenet-simple-donations/?ref=auth-simple-donation
 Description: Accept donations simply with Authorize.net. Easy to use and configure.
-Version: 1.2
+Version: 2.1
 License: GPLv2 or later
 */
 
@@ -175,7 +175,7 @@ function fn_wds_donate()
 
 				
 			$response_array = explode($post_values["x_delim_char"],$post_response);
-			$transaction_id = $response_array[7];
+			$transaction_id = $response_array[6];
 			$last_4         = $response_array[50];
 			$approval_code  = $response_array[4];
 
@@ -233,8 +233,8 @@ function fn_wds_donate()
 				<p><label style="width:50%">E-mail</label> <input type="text" style="width:50%" name="donor_email" id="donor_email"> </p>
 				<p><label style="width:50%">Amount (USD)</label> <input type="text" style="width:50%" name="donation_amount" id="donation_amount"> </p>
 				<p><label style="width:50%">Card Number</label> <input type="text" maxlength="25" style="width:50%" name="donor_card_number" id="donor_card_number"> </p>
-				<p><label style="width:50%">CVV</label> <input type="text" maxlength="3" name="donor_cvv" id="cvv"> </p>
-				<p><label style="width:50%">Card Expiry (mmyy)</label> <input type="text" maxlength="4" name="donor_card_expiry" id="donor_card_expiry" > </p>
+				<p><label style="width:50%">CVV</label> <input type="text" maxlength="3" style="width:50%" name="donor_cvv" id="cvv"> </p>
+				<p><label style="width:50%">Card Expiry (mmyy)</label> <input type="text" maxlength="4" style="width:50%" name="donor_card_expiry" id="donor_card_expiry" > </p>
 				<p> <input type="submit" name="wds_donate" value="Donate Now"> </p>
 			</form>';
 	
@@ -289,11 +289,11 @@ add_action('admin_menu', 'wds_create_menu');
 function wds_create_menu() {
 
 	add_menu_page('Donation Settings', 'Donation Settings', 'administrator', 'donation-settings-page', 'donation_settings_page');
-   add_action( 'admin_init', 'register_mysettings' );
+   add_action( 'admin_init', 'donation_register_mysettings' );
 }
 
 
-function register_mysettings() {
+function donation_register_mysettings() {
 
 	register_setting( 'wds-settings-group', 'wds_donation_login_id' );
 	register_setting( 'wds-settings-group', 'wds_donation_transaction_key' );
@@ -321,13 +321,13 @@ endif;
     <?php do_settings_sections( 'wds-settings-group' ); ?>
     <table class="form-table">
         <tr valign="top">
-	    <th scope="row">Authorize.net Login Id</th>
-        <td><input type="text" style="width:50%" name="wds_donation_login_id" value="<?php echo get_option('wds_donation_login_id'); ?>" /></td>
+	    <th scope="row">Authorize.net Login ID</th>
+        <td><input type="text" style="width:50%" name="wds_donation_login_id" value="<?php echo get_option('wds_donation_login_id'); ?>" placeholder="API Login ID" /></td>
         </tr>
 		
         <tr valign="top">
         <th scope="row">Authorize.net Transaction Key</th>
-        <td><input type="text" style="width:50%" name="wds_donation_transaction_key" value="<?php echo get_option('wds_donation_transaction_key'); ?>" /></td>
+        <td><input type="text" style="width:50%" name="wds_donation_transaction_key" value="<?php echo get_option('wds_donation_transaction_key'); ?>" placeholder="API Transaction Key" /></td>
         </tr>
 		
 		<tr valign="top">
@@ -340,7 +340,7 @@ endif;
 
 		<tr valign="top">
         <th scope="row">Thank You Message</th>
-        <td><input type="text" style="width:50%" name="wds_thankyou_message" value="<?php echo get_option('wds_thankyou_message'); ?>" /></td>
+        <td><input type="text" style="width:50%" name="wds_thankyou_message" value="<?php echo get_option('wds_thankyou_message'); ?>" placeholder="Thank you message visible to Donor after donation" /></td>
         </tr>
 		
 		<tr valign="top">
